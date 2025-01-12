@@ -1,0 +1,37 @@
+<div class="content">
+    <form class="example-form">
+        <mat-grid-list cols="2" rowHeight="2:1">
+            <mat-grid-tile>Que recherchez-vous ?</mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="fill">
+                    <mat-label>Choisissez une raison</mat-label>
+                    <mat-select [(ngModel)]="selectedReasons" name="reason" required>
+                    <mat-option *ngFor="let reason of selectedReasons" [value]="reason">{{ reason }}</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="!selectedReasons">Ce champ est requis</mat-error>
+              </mat-form-field>
+            </mat-grid-tile>
+    
+            <mat-grid-tile>Ville</mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="fill">
+                    <mat-label>Ville</mat-label>
+                    <input matInput placeholder="Entrez votre un nom de viller" [(ngModel)]="city" name="city" required>
+                    <mat-icon matSuffix>location_city</mat-icon>
+                    <mat-error *ngIf="!city">Ce champ est requis</mat-error>
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>Code postal</mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="fill">
+                    <mat-label>Nom d'utilisateur</mat-label>
+                    <input matInput placeholder="Entrez votre le code postal correspondant" [(ngModel)]="postalCode" name="postal code" required>
+                    <mat-icon matSuffix>local_post_office</mat-icon>
+                    <mat-error *ngIf="!postalCode">Ce champ est requis</mat-error>
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile></mat-grid-tile>
+            <mat-grid-tile><button mat-raised-button color="primary" (click)="submitForm()">Recercher</button></mat-grid-tile>
+        </mat-grid-list>
+    </form>
+</div>
