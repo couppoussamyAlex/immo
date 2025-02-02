@@ -1,3 +1,51 @@
 .content {
+    width: 100%;
+}
+
+.grid-section {
     width: 25%;
 }
+
+.research-section {
+    background-color: aqua;
+}
+
+.interval-section {
+    display: flex;
+}
+
+.one {
+    flex: 1 1 auto;
+  }
+  
+  .two {
+    flex: 1 1 auto;
+  }
+  
+  .three {
+    flex: 1 1 auto;
+  }
+
+  .criterion-line {
+    margin: 1%;
+  }
+
+  .criterion-name {
+    margin-bottom: 2%;
+  }
+
+  .criterion-line input {
+    background-color: transparent; /* Fond transparent */
+    caret-color: transparent; /* Retire le curseur d'édition */
+    padding: 10px;
+  }
+
+  .criterion-section {
+    width: 70%;
+  }
+
+  .property-panel {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+  }
